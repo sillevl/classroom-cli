@@ -1,8 +1,10 @@
+require "classroom/version"
+
 module Classroom
     module Commands
         class Version
             def initialize options
-                puts "Hello from Version !!!"
+                puts Classroom::VERSION
             end
 
             def self.optsparser
