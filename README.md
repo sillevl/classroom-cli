@@ -22,7 +22,21 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Cloning
+
+The clone command will clone a set of repositories at once. The set of repositories is defined in a `projects.yml` file.
+
+```
+$ classroom clone
+```
+
+add a `projects.yml` file to your project directory containing the following example content:
+
+```yml
+projects:
+- https://github.com/courseabc/xyz
+- https://github.com/courseabc/opq
+```
 
 ## Development
 

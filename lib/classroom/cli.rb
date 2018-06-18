@@ -2,6 +2,7 @@ require "classroom/version"
 require "classroom/commands/foo"
 require "classroom/commands/bar"
 require "classroom/commands/version"
+require "classroom/commands/clone"
 
 module Classroom
   class Cli
@@ -19,6 +20,7 @@ module Classroom
 
       subcommands = { 
         'version' => Classroom::Commands::Version,
+        'clone' => Classroom::Commands::Clone,
         'foo' => Classroom::Commands::Foo,
         'bar' => Classroom::Commands::Bar
       }

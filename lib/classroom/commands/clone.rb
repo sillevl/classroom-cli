@@ -7,24 +7,24 @@ module Classroom
 
                 # TODO: make file an option, and give error if file does not exist
                 projects = YAML.load_file('projects.yml')['projects']
+                puts projects.inspect if options[:verbose]
 
-                puts "Clongin projects..."
+                puts "Clonin projects..."
                 projects.each do |url|
-                    student_name = url[/github.com\/(.*)\//, 1]
-                    # puts student_name
+                    # student_name = url[/github.com\/(.*)\//, 1]
+                    # # puts student_name
                 
-                    url_path = url[/github.com\/(.*)/, 1] + ".git"
-                    ssh_url = "git@git.github.com:" + url_path
+                    # url_path = url[/github.com\/(.*)/, 1] + ".git"
+                    # ssh_url = "git@git.github.com:" + url_path
                 
-                    # puts ssh_url
-                
-                    clone_project ssh_url, student_name
+                    clone_project url
                 end
                 puts "done!"
             end
 
-            def def clone_project url, project_name
-                system("git clone #{url} #{project_name}")
+            def clone_project url, project_name = nil
+                # TODO: enable to choose projectname 
+                system("git clone #{url}")
             end
 
             def self.optsparser
