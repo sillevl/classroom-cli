@@ -38,6 +38,26 @@ projects:
 - https://github.com/courseabc/opq
 ```
 
+### Fetching repos from a user or organization
+
+The `repos` command will create a yaml file containing all the repos of a user or organization.
+
+Options:
+* `--user <username>`: fetch all repos of a user.
+* `--org <organization>`: fetch all repos of an organization.
+* `--token <auth_token>`: provide an authentication token - required if you wish to also retrieve private repos.
+* `--file <name.yml>`: you can provide an alternative filename to output the projects to. If none is provided it defaults to `projects.yml`
+
+An authentication token can be create on your personal profile settings page (`Settings => Developer settings => Personal access tokens`).
+
+Example:
+
+```shell
+classroom repos --token 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' --user 'BioBoost' --file my_repos.yml
+```
+
+This fetches all my personal repos, including the private once since a token is provided. The results are saved to a file `my_repos.yml`.
+
 ## Development
 
 Running the executable while developing:
