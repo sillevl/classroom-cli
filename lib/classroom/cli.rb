@@ -35,7 +35,7 @@ module Classroom
       cli.order!
       command = subcommands[ARGV.shift]
       if command
-        command.optsparser.order! 
+        command.optsparser(options).order!
         command.new(options)
       else
         puts cli.help

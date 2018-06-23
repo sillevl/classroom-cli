@@ -7,7 +7,7 @@ module Classroom
                 puts Classroom::VERSION
             end
 
-            def self.optsparser
+            def self.optsparser options
                 OptionParser.new do |opts|
                     opts.banner = "Usage: classroom foo [options]"
         
