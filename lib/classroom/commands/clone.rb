@@ -9,7 +9,7 @@ module Classroom
                 projects = YAML.load_file('projects.yml')['projects']
                 puts projects.inspect if options[:verbose]
 
-                puts "Clonin projects..."
+                puts "Cloning projects..."
                 projects.each do |url|
                     # student_name = url[/github.com\/(.*)\//, 1]
                     # # puts student_name
