@@ -4,6 +4,7 @@ require "classroom/commands/bar"
 require "classroom/commands/version"
 require "classroom/commands/clone"
 require "classroom/commands/repos"
+require "classroom/commands/push"
 
 module Classroom
   class Cli
@@ -31,7 +32,8 @@ module Classroom
         'clone' => Classroom::Commands::Clone,
         'foo' => Classroom::Commands::Foo,
         'bar' => Classroom::Commands::Bar,
-        'repos' => Classroom::Commands::Repos
+        'repos' => Classroom::Commands::Repos,
+        'push' => Classroom::Commands::Push
       }
 
       cli.order!
