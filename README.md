@@ -43,6 +43,7 @@ projects:
 The `repos` command will create a yaml file containing all the repos of a user or organization.
 
 Options:
+
 * `--user <username>`: fetch all repos of a user.
 * `--org <organization>`: fetch all repos of an organization.
 * `--token <auth_token>`: provide an authentication token - required if you wish to also retrieve private repos.
@@ -57,6 +58,17 @@ classroom repos --token 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' --user 'BioBo
 ```
 
 This fetches all my personal repos, including the private once since a token is provided. The results are saved to a file `my_repos.yml`.
+
+### Pushing updates to listed repos
+
+*This is still under development and should be used with care!*
+
+The `push` command will allow you to add, commit and push **all changes** to the remotes specified in the `projects.yaml` file.
+
+Options:
+
+* `--message <message>`: specify the commit message
+* `--yes`: do not ask to undertake action and just add, commit and push. Otherwise for each repo it will be asked.
 
 ## Development
 
